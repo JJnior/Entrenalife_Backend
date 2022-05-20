@@ -12,6 +12,7 @@ var producto_routes = require('./routes/producto');
 var monitor_routes = require('./routes/monitor');
 var usuario_routes = require('./routes/usuario');
 var carrito_routes = require('./routes/carrito');
+var procesador_routes = require('./routes/procesador');
 
 //middleware
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -31,6 +32,7 @@ app.use('/api/', producto_routes);
 app.use('/api/', monitor_routes);
 app.use('/api/', usuario_routes);
 app.use('/api/', carrito_routes);
+app.use('/api/', procesador_routes);
 
 //export module
 module.exports = app;
