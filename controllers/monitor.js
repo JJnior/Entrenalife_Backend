@@ -58,6 +58,7 @@ var controller = {
                     monitor.idd = countMonitors +1;
                     monitor.descripcion = req.body.descripcion;
                     monitor.precio = req.body.precio;
+                    monitor.categoria = req.body.categoria
                     db.collection('monitors').insertOne(monitor,
                         (error, result)=>{
                             if(error){
@@ -80,6 +81,7 @@ var controller = {
             monitor.idd = parseInt(req.body.idd);
             monitor.descripcion = req.body.descripcion;
             monitor.precio = req.body.precio;
+            monitor.categoria = req.body.categoria
             console.log(monitor);
             db.collection("monitors").updateOne({
                 idd: { $eq: parseInt(req.body.idd)}},

@@ -13,6 +13,8 @@ var monitor_routes = require('./routes/monitor');
 var usuario_routes = require('./routes/usuario');
 var carrito_routes = require('./routes/carrito');
 var procesador_routes = require('./routes/procesador');
+var reporte_routes = require('./routes/reportemonitor');
+var reporte_routes2 = require('./routes/reporteprocesador');
 
 //middleware
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -33,6 +35,8 @@ app.use('/api/', monitor_routes);
 app.use('/api/', usuario_routes);
 app.use('/api/', carrito_routes);
 app.use('/api/', procesador_routes);
+app.use('/api/',reporte_routes);
+app.use('/api/',reporte_routes2);
 
 //export module
 module.exports = app;

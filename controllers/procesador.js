@@ -58,6 +58,7 @@ var controller = {
                     procesador.idd = countProcesadors +1;
                     procesador.descripcion = req.body.descripcion;
                     procesador.precio = req.body.precio;
+                    procesador.categoria = req.body.categoria
                     db.collection('procesadors').insertOne(procesador,
                         (error, result)=>{
                             if(error){
@@ -80,6 +81,7 @@ var controller = {
             procesador.idd = parseInt(req.body.idd);
             procesador.descripcion = req.body.descripcion;
             procesador.precio = req.body.precio;
+            procesador.categoria = req.body.categoria
             console.log(procesador);
             db.collection("procesadors").updateOne({
                 idd: { $eq: parseInt(req.body.idd)}},
