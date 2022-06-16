@@ -61,6 +61,7 @@ var controller = {
                     usuario.apellidos = req.body.apellidos;
                     usuario.edad = req.body.edad;
                     usuario.correo = req.body.correo;
+                    usuario.sexo = req.body.sexo;
                     usuario.contraseña = req.body.contraseña
                     db.collection('usuarios').insertOne(usuario,
                         (error, result)=>{
@@ -86,6 +87,7 @@ var controller = {
             usuario.apellidos = req.body.apellidos;
             usuario.edad = req.body.edad;
             usuario.correo = req.body.correo;
+            usuario.sexo = req.body.sexo;
             usuario.contraseña = req.body.contraseña
             console.log(usuario);
             db.collection("usuarios").updateOne({
