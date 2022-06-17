@@ -69,6 +69,9 @@ db.collection('carrito').find({productoId:parseInt( req.params.id)}).toArray(
                    carrito.productoId =countcarrito + 1;
                    carrito.descripcion = req.body.descripcion;
                    carrito.precio = req.body.precio;
+                   carrito.imagen= req.body.imagen;
+                    carrito.categoria = req.body.categoria;
+                    carrito.estado = req.body.estado;
                    db.collection('carrito').insertOne(carrito,
                     (error,result)=>{
                         if(error){
@@ -92,6 +95,10 @@ db.collection('carrito').find({productoId:parseInt( req.params.id)}).toArray(
                    carrito.productoId =parseInt(req.body.productoId);
                    carrito.descripcion = req.body.descripcion;
                    carrito.precio = req.body.precio;
+                   carrito.imagen = req.body.imagen;
+                   carrito.categoria = req.body.categoria;
+                    carrito.estado = req.body.estado;
+
                    console.log(carrito);
                    db.collection('carrito').updateOne({productoId:{$eq:parseInt(req.body.productoId)}},
                    {$set:carrito},
