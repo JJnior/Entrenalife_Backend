@@ -1,6 +1,6 @@
 const { response } = require("express");
 const {MongoClient} = require("mongodb");
-const client = new MongoClient("mongodb+srv://procerr:procerr709@cluster0.1nq16.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+const client = new MongoClient("mongodb+srv://julio:cabello@cluster0.6umiiuw.mongodb.net/?retryWrites=true&w=majority");
 
 client.connect().then(
     (response) => {

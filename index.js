@@ -10,7 +10,7 @@ var port = process.env.port || 3999;
 
 //pruebas de conexion
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb+srv://procerr:procerr709@cluster0.1nq16.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://julio:cabello@cluster0.6umiiuw.mongodb.net/?retryWrites=true&w=majority',
                 {useNewUrlParser: true}
 )
 .then(
